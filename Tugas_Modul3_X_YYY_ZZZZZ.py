@@ -74,7 +74,7 @@ if uploaded_file is not None:
     st.dataframe(input_data)
 
     # Load model yang telah tersimpan
-    model_directory = 'C:\Users\yogaj\OneDrive\Dokumen\machie learning\Model Suprevised Learning (Praktek)\Tugas3_D_09976'
+    
     model_path = os.path.join(model_directory, r'SVR_IPK_model.pkl')
     if os.path.exists(model_path):
         with open(model_path, 'rb') as f:
