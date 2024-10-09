@@ -59,7 +59,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown(f"<h1 style='text-align: center; color: #f43f5e;'>Prediksi IPK - 09976</h1>", unsafe_allow_html=True)
+st.markdown(f"<h1 style='text-align: center; color: #f43f5e;'>Prediksi IPK - 9976</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: #00736e;'>Aplikasi ini berguna untuk memprediksi IPK berdasarkan nilai Matematika, Bahasa Inggris, dan Bahasa Indonesia</p>", unsafe_allow_html=True)
 # Sidebar untuk input file
 st.sidebar.markdown("<h3 class='header-text'>Upload File dan Input Nilai</h3>", unsafe_allow_html=True)
@@ -70,8 +70,10 @@ if uploaded_file is not None:
     st.write("<h3 style='text-align: center; color: #00736e;'>Data yang diupload:</h3>", unsafe_allow_html=True)
     st.dataframe(input_data)
 
+    model_directory = r''
     model_path = os.path.join(model_directory, 'SVR_IPK_model.pkl')
 
+    
     if os.path.exists(model_path):
         with open(model_path, 'rb') as f:
             loaded_model = pickle.load(f)
